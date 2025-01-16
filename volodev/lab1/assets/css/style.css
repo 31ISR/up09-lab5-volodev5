@@ -44,13 +44,16 @@ nav {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex; /* Используйте flex для центровки */
+    justify-content: center; /* Центрировать навигационное меню */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 1rem 0;
+    align-items: center; /* Центрируем элементы по вертикали */
 }
 
 nav h2 {
