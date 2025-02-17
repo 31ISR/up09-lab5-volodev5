@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a, #4e4e4e);
+    color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1, h2, p {
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    place-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    margin: 20px;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex; /* Используйте flex для центровки */
+    justify-content: center; /* Центрировать навигационное меню */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    align-items: center; /* Центрируем элементы по вертикали */
+}
+
+nav h2 {
+    text-align: center;
+    color: #00ffcc;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #00ffcc;
+    padding: 12px 20px; /* Увеличенные отступы для красивого оформления */
+    border-radius: 15px; /* Сделаем скругление более выраженным */
+    background: rgba(255, 255, 255, 0.3); /* Легкий фон для каждой ссылки */
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    background: rgba(0, 255, 204, 0.5);
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 8px 15px rgba(0, 255, 204, 0.5);
+}
+
+footer {
+    background: #0d0d0d;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.img {
+    width: 250px;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .img {
+        width: 200px;
+    }
+}
